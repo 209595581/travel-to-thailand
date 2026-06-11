@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>曼谷 + 普吉岛旅行行程板</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">2026.08.10 - 08.20</p>
+          <h1>曼谷 + 普吉岛旅行行程板</h1>
+        </div>
+        <nav class="view-tabs" aria-label="行程视图">
+          <button class="tab-button active" type="button" data-view="overview">总览</button>
+          <button class="tab-button" type="button" data-view="flights">航班</button>
+          <button class="tab-button" type="button" data-view="hotels">酒店</button>
+          <button class="tab-button" type="button" data-view="transport">交通</button>
+          <button class="tab-button" type="button" data-view="places">景点</button>
+          <button class="tab-button" type="button" data-view="nightlife">夜游</button>
+          <button class="tab-button" type="button" data-view="street">现场照</button>
+          <button class="tab-button" type="button" data-view="food">美食</button>
+        </nav>
+      </header>
+
+      <main>
+        <section class="view active" id="view-overview">
+          <section class="immersive-hero" id="heroDeck">
+            <div class="hero-backdrop" id="heroBackdrop"></div>
+            <div class="hero-scrim"></div>
+            <div class="hero-content">
+              <div class="hero-copy" id="heroCopy"></div>
+              <div class="hero-now" id="heroNow"></div>
+            </div>
+            <div class="quick-timeline" id="quickTimeline"></div>
+          </section>
+
+          <section class="summary-grid" aria-label="旅行摘要">
+            <article class="stat-card">
+              <span class="stat-value">11</span>
+              <span class="stat-label">天行程</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">6</span>
+              <span class="stat-label">段航班</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">3</span>
+              <span class="stat-label">家酒店</span>
+            </article>
+            <article class="stat-card">
+              <span class="stat-value">2</span>
+              <span class="stat-label">城市/海岛</span>
+            </article>
+          </section>
+
+          <section class="flow-card">
+            <div class="section-title-row">
+              <div>
+                <p class="eyebrow">Route Flow</p>
+                <h2>整趟旅行怎么流动</h2>
+              </div>
+              <span class="status-pill">已按机票和酒店重排</span>
+            </div>
+            <div class="stage-strip" id="stageStrip"></div>
+          </section>
+
+          <section class="trip-board">
+            <aside class="day-rail">
+              <div class="rail-header">
+                <p class="eyebrow">Daily Plan</p>
+                <h2>每天安排</h2>
+              </div>
+              <div class="day-list" id="dayList"></div>
+            </aside>
+            <article class="day-panel" id="dayPanel"></article>
+          </section>
+        </section>
+
+        <section class="view" id="view-flights">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Flights</p>
+              <h2>航班与衔接</h2>
+            </div>
+          </div>
+          <div class="flight-grid" id="flightGrid"></div>
+        </section>
+
+        <section class="view" id="view-hotels">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Hotels</p>
+              <h2>住宿位置与房型</h2>
+            </div>
+          </div>
+          <div class="hotel-grid" id="hotelGrid"></div>
+        </section>
+
+        <section class="view" id="view-transport">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Transfers</p>
+              <h2>关键交通节点</h2>
+            </div>
+          </div>
+          <div class="transport-list" id="transportList"></div>
+        </section>
+
+        <section class="view" id="view-places">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Places</p>
+              <h2>景点相册</h2>
+            </div>
+          </div>
+          <div class="gallery-grid" id="placeGallery"></div>
+        </section>
+
+        <section class="view" id="view-nightlife">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Patong Night</p>
+              <h2>芭东夜游与 Simon Cabaret</h2>
+            </div>
+          </div>
+          <div class="nightlife-layout">
+            <article class="night-plan" id="nightPlan"></article>
+            <div class="gallery-grid" id="nightGallery"></div>
+          </div>
+        </section>
+
+        <section class="view" id="view-street">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Travel Shots</p>
+              <h2>游客视角现场照</h2>
+            </div>
+          </div>
+          <div class="masonry-grid" id="streetGallery"></div>
+        </section>
+
+        <section class="view" id="view-food">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Food</p>
+              <h2>美食相册与吃饭安排</h2>
+            </div>
+          </div>
+          <div class="food-board">
+            <div class="gallery-grid" id="foodGallery"></div>
+            <aside class="food-side">
+              <h3>每天吃什么</h3>
+              <div id="foodSchedule"></div>
+              <h3>点菜小抄</h3>
+              <div class="phrase-grid" id="phraseGrid"></div>
+            </aside>
+          </div>
+        </section>
+      </main>
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" type="button" id="lightboxClose" aria-label="关闭照片预览">×</button>
+        <figure>
+          <img id="lightboxImage" alt="" />
+          <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+      </div>
+    </div>
+  </body>
+</html>
