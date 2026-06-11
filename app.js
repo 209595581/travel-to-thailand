@@ -1,7 +1,9 @@
-const rich = "assets/guide_images_rich/";
+﻿const rich = "assets/guide_images_rich/";
 const foodDir = "assets/guide_food_images/";
 const touristDir = "assets/guide_tourist_images/";
 const patongDir = "assets/guide_patong_images/";
+const muayThaiDir = "assets/guide_muaythai_images/";
+const docxDir = "assets_docx/";
 
 const images = {
   grandPalace: rich + "01_grand_palace.jpg",
@@ -76,6 +78,38 @@ const patongImages = {
   simonCostume: patongDir + "09_simon_costume.jpg",
 };
 
+const muayThaiImages = {
+  banglaStadium: muayThaiDir + "01_bangla_boxing_stadium.jpg",
+  boxer: muayThaiDir + "02_muay_thai_boxer.jpg",
+  trainer: muayThaiDir + "03_boxer_and_trainer.jpg",
+  corner: muayThaiDir + "04_muay_thai_corner.jpg",
+  match: muayThaiDir + "05_muay_thai_match.jpg",
+};
+
+const docxImages = {
+  auricoPool: docxDir + "image3.jpg",
+  auricoRoomWide: docxDir + "image4.jpg",
+  auricoBalcony: docxDir + "image7.jpg",
+  auricoAerial: docxDir + "image9.jpg",
+  jimThompson: docxDir + "image23.jpg",
+  mahanakhonSky: docxDir + "image24.jpg",
+  mahanakhonSunset: docxDir + "image25.jpg",
+  erawanShrine: docxDir + "image26.jpg",
+  ayutthayaCollage: docxDir + "image28.jpg",
+  shootingGuns: docxDir + "image29.jpg",
+  banzaanSeafood: docxDir + "image30.jpg",
+  promthepSunset: docxDir + "image31.jpg",
+  shootingPriceBoard: docxDir + "image32.jpg",
+  oldTownNight: docxDir + "image36.jpg",
+  bigBuddhaUser: docxDir + "image37.jpg",
+  karonViewUser: docxDir + "image38.jpg",
+  promthepAfterglow: docxDir + "image40.jpg",
+  sunsetRed: docxDir + "image41.jpg",
+  naiHarnUser: docxDir + "image42.jpg",
+  mangoDessertUser: docxDir + "image55.jpg",
+  somTamUser: docxDir + "image56.jpg",
+};
+
 const stages = [
   {
     title: "8/10 抵达曼谷",
@@ -94,7 +128,7 @@ const stages = [
   },
   {
     title: "8/14-8/19 普吉",
-    detail: "Kata为基地，陆地线、攀牙湾、海滩、SPA和海鲜。",
+    detail: "Kata为基地，陆地线、攀牙湾、芭东夜游、泰拳、SPA和海鲜。",
     accent: "saffron",
   },
   {
@@ -267,7 +301,7 @@ const days = [
     hotel: "YANH Ratchawat Hotel",
     transport: "打车/轨道交通组合，按商场和天气调整",
     flight: "无",
-    hero: images.mahanakhon,
+    hero: docxImages.mahanakhonSunset,
     tags: ["公共假日", "商场", "夜景"],
     schedule: [
       ["上午", "Jim Thompson House或Siam", "公共假日不赶远路。"],
@@ -277,7 +311,7 @@ const days = [
     ],
     places: ["ICONSIAM", "Siam", "Mahanakhon"],
     foods: ["绿咖喱", "泰奶", "芒果甜品"],
-    images: [images.iconsiam, foodImages.greenCurry, touristImages.bangkokFoodSeller],
+    images: [docxImages.jimThompson, docxImages.erawanShrine, docxImages.mahanakhonSky],
     note: "8月12日是泰国母亲节/公共假日，人会更多。",
   },
   {
@@ -298,7 +332,7 @@ const days = [
     ],
     places: ["云石寺", "Ari", "大城备选"],
     foods: ["本地小店", "船面", "咖啡"],
-    images: [images.watBench, touristImages.bangkokFoodStalls, foodImages.thaiTea],
+    images: [images.watBench, docxImages.ayutthayaCollage, foodImages.thaiTea],
     note: "真实机票是8月14日飞普吉，所以8月13日保留为曼谷完整一天。",
   },
   {
@@ -310,7 +344,7 @@ const days = [
     hotel: "Aurico Kata Resort & Spa",
     transport: "YANH -> BKK -> HKT -> Kata -> 神仙半岛 -> Patong",
     flight: "VZ304 10:20-11:55",
-    hero: images.promthep,
+    hero: docxImages.shootingGuns,
     tags: ["飞行", "射击", "海鲜"],
     schedule: [
       ["07:00", "从YANH出发去BKK", "目标08:15左右到机场。"],
@@ -322,7 +356,7 @@ const days = [
     ],
     places: ["Aurico酒店", "神仙半岛射击场", "Promthep Cape", "Patong / 班赞"],
     foods: ["班赞海鲜", "冬阴功", "椰子冰淇淋"],
-    images: [images.auricoPool, images.promthep, patongImages.fishMarket],
+    images: [docxImages.shootingGuns, docxImages.banzaanSeafood, docxImages.shootingPriceBoard],
     note: "这天刚飞到普吉，射击和班赞海鲜都保留，但不要再叠加人妖秀，避免第一天太累。",
   },
   {
@@ -356,7 +390,7 @@ const days = [
     hotel: "Aurico Kata Resort & Spa",
     transport: "建议包车/Grab串联老镇、查龙寺、大佛和普吉镇夜市",
     flight: "无",
-    hero: touristImages.oldTown3,
+    hero: docxImages.oldTownNight,
     tags: ["老镇", "寺庙", "周末夜市"],
     schedule: [
       ["上午", "普吉老镇", "拍中葡建筑、咖啡、小店和午餐。"],
@@ -366,7 +400,7 @@ const days = [
     ],
     places: ["普吉老镇", "查龙寺", "普吉大佛", "普吉镇周末夜市"],
     foods: ["老镇咖啡", "夜市小吃", "芒果糯米饭"],
-    images: [touristImages.oldTown2, images.watChalong, images.bigBuddha],
+    images: [docxImages.oldTownNight, images.watChalong, docxImages.bigBuddhaUser],
     note: "8月16日是周日，适合把普吉镇周末夜市放进来；若大雨就改Central Phuket。",
   },
   {
@@ -398,23 +432,26 @@ const days = [
     id: "d0818",
     date: "8/18",
     weekday: "周二",
-    title: "普吉机动日：好天气出海，坏天气室内",
+    title: "普吉机动日 + Rawai 泰拳夜",
     city: "普吉",
     hotel: "Aurico Kata Resort & Spa",
-    transport: "按天气决定一日团、商场或老镇",
+    transport: "白天按天气调整；晚上Kata -> Rawai Boxing Stadium -> Kata",
     flight: "无",
-    hero: images.promthep,
-    tags: ["机动", "天气优先", "最后一晚普吉"],
+    hero: muayThaiImages.boxer,
+    tags: ["机动", "泰拳", "Rawai"],
     schedule: [
-      ["天气好", "皇帝岛/珊瑚岛/皮皮岛择一", "皮皮岛可去，但别为Maya Bay上岛买不可退团。"],
-      ["天气一般", "短线或放弃出海", "优先轻松，不硬冲外海。"],
-      ["天气差", "Central Phuket/老镇/SPA", "商场和老镇更稳。"],
-      ["晚上", "最后一顿普吉海边餐", "海鲜或Kata餐厅。"],
+      ["上午", "保留机动，不硬排远线", "前一天已经芭东夜游和Simon Cabaret，这天上午用来睡够、看天气、补体力。"],
+      ["天气好", "Kata / Nai Harn / 神仙半岛轻松线", "想看海就走南部短线，不建议再塞很重的离岛团。"],
+      ["天气差", "Central Phuket / SPA / 酒店泳池", "雨季把室内选项放前面，晚上泰拳不太受天气影响。"],
+      ["18:00", "Rawai 或 Nai Harn 晚餐", "先吃海鲜或简餐，再去拳场；别饿着看两小时比赛。"],
+      ["19:45", "从Aurico Kata出发去Rawai Boxing Stadium", "约9-11公里，正常20-30分钟；雨天或堵车预留40分钟。"],
+      ["21:00-23:00", "Rawai Boxing Stadium 泰拳", "8/18是周二，Rawai有周二/周五晚场信息；不同票务页会更新，临行前若场次变化就改Bangla或Patong。"],
+      ["23:00后", "打车回Kata", "第二天晚班机，不用早起，但夜里回程仍优先Grab/Bolt或现场正规出租。"],
     ],
-    places: ["珊瑚岛", "神仙半岛", "Central Phuket备选"],
-    foods: ["海鲜", "芒果糯米饭", "椰子冰淇淋"],
-    images: [touristImages.bananaBeach, foodImages.mangoSticky, foodImages.phuketSeafood],
-    note: "Maya Bay 2026年8月1日-9月30日关闭。",
+    places: ["Rawai Boxing Stadium", "Nai Harn", "神仙半岛", "Central Phuket备选"],
+    foods: ["Rawai海鲜", "Kata简餐", "泰奶"],
+    images: [muayThaiImages.boxer, muayThaiImages.trainer, docxImages.naiHarnUser],
+    note: "把泰拳放8月18日最顺：它是周二、离Kata近、不会和8月17日Simon Cabaret挤在同一晚；如果想要更芭东的夜生活氛围，备用改Bangla Boxing Stadium。",
   },
   {
     id: "d0819",
@@ -468,8 +505,138 @@ const transport = [
   ["8月15日", "攀牙湾出海", "选一日团酒店接送，优先可改期/取消。"],
   ["8月16日", "普吉陆地线 + 周末夜市", "普吉老镇、查龙寺、普吉大佛、普吉镇周末夜市建议包车或连续Grab。"],
   ["8月17日", "Kata到Patong夜游", "16:30左右从Kata出发，晚餐后看Simon Cabaret，演出后短逛Bangla Road再回Kata。"],
+  ["8月18日", "Kata到Rawai泰拳夜", "19:45左右从Aurico Kata出发去Rawai Boxing Stadium；正常约20-30分钟，雨天预留40分钟。"],
   ["8月19日", "普吉晚班机", "18:00-18:30从Kata出发去HKT，23:30到BKK后去机场酒店。"],
   ["8月20日", "机场酒店到BKK", "成都建议07:30-07:45离店；上海可09:30左右离店或一起早到。"],
+];
+
+const routeData = [
+  {
+    day: "8/10",
+    base: "BKK素万那普机场",
+    target: "YANH Ratchawat Hotel",
+    distance: "约35公里",
+    time: "45-70分钟",
+    mode: "Grab / Bolt / 出租车",
+    route: "两组航班在到达层汇合后统一叫车；晚高峰进城预留时间，不再安排景点。",
+  },
+  {
+    day: "8/11",
+    base: "YANH Ratchawat Hotel",
+    target: "大皇宫 / 卧佛寺",
+    distance: "约6-8公里",
+    time: "20-35分钟",
+    mode: "打车到大皇宫，寺庙间步行/短车程",
+    route: "早上直接打车进老城；卧佛寺到郑王庙走码头渡船，晚上再去ICONSIAM或唐人街。",
+  },
+  {
+    day: "8/12",
+    base: "YANH Ratchawat Hotel",
+    target: "Siam / Jim Thompson / Mahanakhon",
+    distance: "约7-12公里",
+    time: "25-55分钟",
+    mode: "Grab + BTS组合",
+    route: "白天Siam/Jim Thompson优先打车；傍晚Mahanakhon若堵车，可打车到BTS站再换乘。",
+  },
+  {
+    day: "8/14",
+    base: "YANH Ratchawat Hotel",
+    target: "BKK机场",
+    distance: "约35公里",
+    time: "45-70分钟",
+    mode: "预约车 / Grab",
+    route: "07:00-07:15离店，目标08:15左右到BKK，给国内段VZ304留足值机和安检时间。",
+  },
+  {
+    day: "8/14",
+    base: "HKT普吉机场",
+    target: "Aurico Kata Resort & Spa",
+    distance: "约45公里",
+    time: "60-90分钟",
+    mode: "预订接机车 / Grab",
+    route: "4人带行李建议提前订接机；抵达后先入住或寄存，再走南部短线。",
+  },
+  {
+    day: "8/14",
+    base: "Aurico Kata Resort & Spa",
+    target: "神仙半岛射击 / Promthep",
+    distance: "约12-14公里",
+    time: "25-40分钟",
+    mode: "Grab / 包车",
+    route: "从Kata往南去射击场和神仙半岛，天气好可顺带看日落；雨天缩短停留。",
+  },
+  {
+    day: "8/14 / 8/17",
+    base: "Aurico Kata Resort & Spa",
+    target: "Patong / 班赞 / Bangla Road",
+    distance: "约12-15公里",
+    time: "30-50分钟",
+    mode: "Grab / Bolt",
+    route: "傍晚山路和芭东进城会堵，晚餐或演出前至少提前45分钟出发。",
+  },
+  {
+    day: "8/17",
+    base: "Aurico Kata Resort & Spa",
+    target: "Simon Cabaret Phuket",
+    distance: "约10-12公里",
+    time: "25-40分钟",
+    mode: "Grab / 演出票接送",
+    route: "如果订19:30场，建议18:45前从晚餐点出发；演出后再短逛Bangla Road。",
+  },
+  {
+    day: "8/18",
+    base: "Aurico Kata Resort & Spa",
+    target: "Rawai Boxing Stadium",
+    distance: "约9-11公里",
+    time: "20-30分钟",
+    mode: "Grab / Bolt / 场馆接送",
+    route: "19:45从Kata出发，20:20-20:30到场取票；23:00后叫车回Kata。",
+  },
+  {
+    day: "备用",
+    base: "Aurico Kata Resort & Spa",
+    target: "Bangla Boxing Stadium",
+    distance: "约13-15公里",
+    time: "35-55分钟",
+    mode: "Grab / Bolt",
+    route: "如果想把泰拳和芭东夜生活连在一起，可改去Bangla Stadium，但和8/17芭东夜游会有重复。",
+  },
+  {
+    day: "8/16",
+    base: "Aurico Kata Resort & Spa",
+    target: "普吉老镇 / 周末夜市",
+    distance: "约15公里",
+    time: "30-45分钟",
+    mode: "包车 / 连续Grab",
+    route: "建议把老镇、查龙寺、大佛串成一条陆地线；周日傍晚回老镇吃夜市。",
+  },
+  {
+    day: "8/16",
+    base: "Aurico Kata Resort & Spa",
+    target: "查龙寺 / 普吉大佛",
+    distance: "约8-13公里",
+    time: "15-45分钟",
+    mode: "包车更顺",
+    route: "查龙寺较近，大佛是山路且受开放/天气影响，临时确认后再上山。",
+  },
+  {
+    day: "8/19",
+    base: "Aurico Kata Resort & Spa",
+    target: "HKT普吉机场",
+    distance: "约45公里",
+    time: "60-90分钟",
+    mode: "预约送机 / Grab",
+    route: "PG280为21:55起飞，建议18:00-18:30从Kata出发，目标19:30-20:00到机场。",
+  },
+  {
+    day: "8/20",
+    base: "At Residence Suvarnabhumi",
+    target: "BKK机场",
+    distance: "约5-6公里",
+    time: "10-15分钟",
+    mode: "酒店接驳 / 出租车",
+    route: "成都航班早一些，建议07:30-07:45离店；上海航班可晚点或一起早到。",
+  },
 ];
 
 const placeGallery = [
@@ -478,18 +645,24 @@ const placeGallery = [
   ["郑王庙", "8月11日下午", images.watArun],
   ["唐人街", "8月11日晚上", images.yaowarat],
   ["ICONSIAM", "8月12日/雨天备选", images.iconsiam],
-  ["Mahanakhon", "8月12日傍晚", images.mahanakhon],
+  ["Jim Thompson House", "8月12日上午", docxImages.jimThompson],
+  ["四面佛", "8月12日下午可顺路", docxImages.erawanShrine],
+  ["Mahanakhon", "8月12日傍晚", docxImages.mahanakhonSunset],
   ["云石寺", "8月13日轻松线", images.watBench],
-  ["大城府", "8月13日远郊备选", images.ayutthaya],
+  ["大城府", "8月13日远郊备选", docxImages.ayutthayaCollage],
   ["Kata Beach", "8月14日后基地", images.kata],
+  ["神仙半岛射击场", "8月14日下午", docxImages.shootingGuns],
+  ["班赞海鲜", "8月14日晚餐", docxImages.banzaanSeafood],
   ["神仙半岛", "8月14日射击/日落", images.promthep],
   ["攀牙湾", "8月15日出海首选", images.phangNga],
-  ["普吉老镇", "8月16日", images.oldTown],
+  ["普吉老镇夜景", "8月16日周末夜市", docxImages.oldTownNight],
   ["查龙寺", "8月16日", images.watChalong],
-  ["普吉大佛", "8月16日开放则去", images.bigBuddha],
+  ["普吉大佛", "8月16日开放则去", docxImages.bigBuddhaUser],
   ["Patong Beach", "8月17日傍晚", patongImages.patongBeach],
   ["Bangla Road", "8月17日晚", patongImages.banglaRoad],
   ["Simon Cabaret", "8月17日晚", patongImages.simonStage],
+  ["Rawai Boxing Stadium", "8月18日晚泰拳首选", muayThaiImages.match],
+  ["Bangla Boxing Stadium", "泰拳备用，适合想连芭东夜生活", muayThaiImages.banglaStadium],
   ["Nai Harn", "海滩备选", images.naiHarn],
   ["珊瑚岛", "8月18日好天气备选", images.coral],
 ];
@@ -528,6 +701,31 @@ const streetGallery = [
   ["Bangla Road夜景", "芭东夜生活核心，演出前后短逛即可。", patongImages.banglaRoad],
   ["芭东Tuk Tuk街景", "夜里回Kata时注意叫车价格和等待时间。", patongImages.tukTuk],
   ["Simon Cabaret舞台", "人妖秀官方图库图，适合对应8月17日晚。", patongImages.simonShow],
+  ["泰拳赛前角落", "8月18日Rawai泰拳夜，氛围会比普通景点更有现场感。", muayThaiImages.corner],
+  ["泰拳训练合影感", "游客看比赛前后常见的拳手和教练视角。", muayThaiImages.trainer],
+  ["拳场比赛瞬间", "适合放进泰拳页面和8月18日主线。", muayThaiImages.match],
+];
+
+const docPhotoGallery = [
+  ["Aurico酒店泳池", "你在Word里新增的酒店照片，放进网页酒店/住宿氛围。", docxImages.auricoPool],
+  ["Aurico房间", "比官网小图更直观，适合同行看房型感。", docxImages.auricoRoomWide],
+  ["Aurico阳台", "普吉Kata段住宿视角。", docxImages.auricoBalcony],
+  ["Aurico俯视", "酒店公共区和泳池空间感。", docxImages.auricoAerial],
+  ["Jim Thompson House", "8月12日上午城市休闲线。", docxImages.jimThompson],
+  ["四面佛", "8月12日Siam/CentralWorld附近可顺路。", docxImages.erawanShrine],
+  ["Mahanakhon城市视野", "傍晚看城市线的照片。", docxImages.mahanakhonSky],
+  ["Mahanakhon日落", "已用作8月12日主视觉。", docxImages.mahanakhonSunset],
+  ["大城府拼图", "8月13日远郊备选。", docxImages.ayutthayaCollage],
+  ["神仙半岛射击场", "8月14日下午安排。", docxImages.shootingGuns],
+  ["射击价格牌", "临场预算和项目参考。", docxImages.shootingPriceBoard],
+  ["班赞海鲜", "8月14日晚餐主线。", docxImages.banzaanSeafood],
+  ["神仙半岛日落", "8月14或8月18天气好时可用。", docxImages.promthepSunset],
+  ["普吉老镇夜景", "8月16日周末夜市氛围。", docxImages.oldTownNight],
+  ["普吉大佛", "8月16日当天确认开放再去。", docxImages.bigBuddhaUser],
+  ["Karon Viewpoint", "慢玩日/陆地线备选。", docxImages.karonViewUser],
+  ["Nai Harn海滩", "浪大时看海，不强行下水。", docxImages.naiHarnUser],
+  ["芒果甜品", "商场或老镇甜品备选。", docxImages.mangoDessertUser],
+  ["青木瓜沙拉", "点少辣更稳。", docxImages.somTamUser],
 ];
 
 const nightPlan = {
@@ -555,6 +753,39 @@ const nightGallery = [
   ["Simon Cabaret服装", "演出后合影通常需小费。", patongImages.simonCostume],
 ];
 
+const fightPlan = {
+  title: "8月18日｜Rawai Boxing Stadium",
+  summary:
+    "推荐放在8月18日周二晚上：Rawai离Kata更近，白天可以保留天气机动，前一晚已经玩过芭东和Simon Cabaret，不会连续两晚都在同一个区域赶场。",
+  reason: [
+    ["更顺路", "Aurico Kata到Rawai约9-11公里，比再去芭东方向轻松。"],
+    ["不撞行程", "8月17日已经安排Patong + Simon Cabaret，把泰拳放8月18日节奏更舒服。"],
+    ["周二匹配", "Rawai有周二/周五21:00-23:00晚场信息；8月18日是周二，但临行前仍要复核。"],
+  ],
+  steps: [
+    ["白天", "Kata / Nai Harn / SPA机动", "只排短线，避免晚上看比赛时太累。"],
+    ["18:00", "Rawai或Nai Harn晚餐", "先吃海鲜或简餐，比赛现场不一定适合正餐。"],
+    ["19:45", "从Aurico Kata出发", "正常20-30分钟，雨天或堵车预留40分钟。"],
+    ["20:30", "到场取票、选座、拍照", "如果买VIP或前排座，提前到更从容。"],
+    ["21:00-23:00", "看泰拳比赛", "一般是多场比赛连续进行，现场氛围会比视频更强。"],
+    ["23:00后", "叫车回Kata", "用Grab/Bolt或场馆正规接送，不临时坐报价不清楚的车。"],
+  ],
+  backup:
+    "如果当天更想继续芭东氛围，备用改Bangla Boxing Stadium；它更热闹、周边夜生活更密集，但从Kata过去更远，也会和8月17日芭东夜游重复。",
+  note: "票价、场次和接送会变动，建议出发前一周再核对官方页面或票务平台。",
+};
+
+const fightGallery = [
+  ["Rawai泰拳夜主线", "8月18日21:00-23:00，放在最后一晚普吉最顺。", muayThaiImages.boxer],
+  ["拳手与教练", "游客照片感更强，适合给同行解释现场氛围。", muayThaiImages.trainer],
+  ["赛前角落", "到场取票后可以拍一些场馆和赛前准备。", muayThaiImages.corner],
+  ["比赛瞬间", "Rawai首选；Bangla作为更芭东的备用方案。", muayThaiImages.match],
+  ["Bangla Boxing Stadium", "如果想把泰拳和芭东夜生活连起来，就改这个备用。", muayThaiImages.banglaStadium],
+  ["Nai Harn傍晚", "泰拳前可以轻松吃饭、看海，不要再塞重行程。", docxImages.naiHarnUser],
+  ["Kata游客海滩", "白天慢玩，晚上再出门。", touristImages.kataTourist],
+  ["Rawai海鲜方向", "晚餐可以放在Rawai/Nai Harn一带。", foodImages.phuketSeafood],
+];
+
 const foodSchedule = [
   ["8/10", "酒店附近轻松吃：Pad Thai、炒饭/炒粉、泰奶。"],
   ["8/11", "河边简餐 + 唐人街/ICONSIAM：船面、烤海鲜、芒果糯米饭。"],
@@ -564,7 +795,7 @@ const foodSchedule = [
   ["8/15", "出海团午餐 + 回Kata补正餐。"],
   ["8/16", "老镇午餐 + 普吉镇周末夜市：咖啡、小吃、芒果糯米饭。"],
   ["8/17", "Kata慢玩，傍晚Patong：Banzaan/Jungceylon/No.6，接Simon Cabaret。"],
-  ["8/18", "天气好吃海鲜，天气差去Central Phuket/老镇。"],
+  ["8/18", "白天机动，傍晚Rawai/Nai Harn吃海鲜或简餐，21:00看Rawai泰拳。"],
   ["8/19", "午餐吃好，晚餐机场前解决。"],
   ["8/20", "机场早餐/简餐；春秋无餐食，过安检后买水。"],
 ];
@@ -764,6 +995,24 @@ function renderTransport() {
       </article>`,
     )
     .join("");
+
+  const routeGrid = $("#routeGrid");
+  if (routeGrid) {
+    routeGrid.innerHTML = routeData
+      .map(
+        (route) => `
+        <article class="route-card">
+          <p class="eyebrow">${route.day} · ${route.mode}</p>
+          <h3>${route.base} → ${route.target}</h3>
+          <div class="route-stats">
+            <span>${route.distance}</span>
+            <span>${route.time}</span>
+          </div>
+          <p>${route.route}</p>
+        </article>`,
+      )
+      .join("");
+  }
 }
 
 function renderGallery(target, data) {
@@ -798,6 +1047,22 @@ function renderStreetGallery() {
     .join("");
 }
 
+function renderDocPhotoGallery() {
+  const grid = $("#docPhotoGallery");
+  grid.innerHTML = docPhotoGallery
+    .map(
+      ([title, detail, src]) => `
+      <article class="masonry-card">
+        <img class="clickable-photo" src="${src}" alt="${title}" data-caption="${title} · ${detail}" />
+        <div class="masonry-body">
+          <h3>${title}</h3>
+          <p>${detail}</p>
+        </div>
+      </article>`,
+    )
+    .join("");
+}
+
 function renderNightlife() {
   $("#nightPlan").innerHTML = `
     <p class="eyebrow">Patong Night Route</p>
@@ -817,6 +1082,42 @@ function renderNightlife() {
     <p>${nightPlan.note}</p>
   `;
   renderGallery("#nightGallery", nightGallery);
+}
+
+function renderFight() {
+  $("#fightPlan").innerHTML = `
+    <p class="eyebrow">Best Slot</p>
+    <h3>${fightPlan.title}</h3>
+    <p>${fightPlan.summary}</p>
+    <div class="fight-reasons">
+      ${fightPlan.reason
+        .map(
+          ([title, detail]) => `
+          <div class="fight-reason">
+            <strong>${title}</strong>
+            <span>${detail}</span>
+          </div>`,
+        )
+        .join("")}
+    </div>
+    <div class="night-steps">
+      ${fightPlan.steps
+        .map(
+          ([time, title, detail]) => `
+          <div class="night-step">
+            <time>${time}</time>
+            <div><strong>${title}</strong><span>${detail}</span></div>
+          </div>`,
+        )
+        .join("")}
+    </div>
+    <div class="fight-backup">
+      <strong>备用方案</strong>
+      <p>${fightPlan.backup}</p>
+    </div>
+    <p>${fightPlan.note}</p>
+  `;
+  renderGallery("#fightGallery", fightGallery);
 }
 
 function renderFoodSide() {
@@ -879,8 +1180,16 @@ function bindTabs() {
   });
 }
 
+function bindHashRouting() {
+  window.addEventListener("hashchange", () => {
+    const nextView = location.hash.replace("#", "");
+    showView(nextView || "overview", false);
+  });
+}
+
 function init() {
   bindTabs();
+  bindHashRouting();
   bindLightbox();
   renderHeroDeck();
   renderStages();
@@ -892,7 +1201,9 @@ function init() {
   renderGallery("#placeGallery", placeGallery);
   renderGallery("#foodGallery", foodGallery);
   renderStreetGallery();
+  renderDocPhotoGallery();
   renderNightlife();
+  renderFight();
   renderFoodSide();
   const initialView = location.hash.replace("#", "");
   showView(initialView || "overview", false);

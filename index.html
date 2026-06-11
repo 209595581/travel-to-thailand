@@ -21,7 +21,9 @@
           <button class="tab-button" type="button" data-view="transport">交通</button>
           <button class="tab-button" type="button" data-view="places">景点</button>
           <button class="tab-button" type="button" data-view="nightlife">夜游</button>
+          <button class="tab-button" type="button" data-view="fight">泰拳</button>
           <button class="tab-button" type="button" data-view="street">现场照</button>
+          <button class="tab-button" type="button" data-view="docphotos">文档照</button>
           <button class="tab-button" type="button" data-view="food">美食</button>
         </nav>
       </header>
@@ -108,6 +110,16 @@
             </div>
           </div>
           <div class="transport-list" id="transportList"></div>
+          <section class="route-dashboard">
+            <div class="section-title-row">
+              <div>
+                <p class="eyebrow">Hotel Routes</p>
+                <h2>从酒店出发的距离与线路</h2>
+              </div>
+              <span class="status-pill">按公路估算，出发前看实时路况</span>
+            </div>
+            <div class="route-grid" id="routeGrid"></div>
+          </section>
         </section>
 
         <section class="view" id="view-places">
@@ -133,6 +145,19 @@
           </div>
         </section>
 
+        <section class="view" id="view-fight">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">Muay Thai Night</p>
+              <h2>8月18日 Rawai 泰拳夜</h2>
+            </div>
+          </div>
+          <div class="fight-layout">
+            <article class="fight-plan" id="fightPlan"></article>
+            <div class="gallery-grid" id="fightGallery"></div>
+          </div>
+        </section>
+
         <section class="view" id="view-street">
           <div class="section-title-row">
             <div>
@@ -141,6 +166,16 @@
             </div>
           </div>
           <div class="masonry-grid" id="streetGallery"></div>
+        </section>
+
+        <section class="view" id="view-docphotos">
+          <div class="section-title-row">
+            <div>
+              <p class="eyebrow">From Your Word</p>
+              <h2>你在 Word 里新增的照片</h2>
+            </div>
+          </div>
+          <div class="masonry-grid" id="docPhotoGallery"></div>
         </section>
 
         <section class="view" id="view-food">
