@@ -1,8 +1,8 @@
-const rich = "assets/guide_images_rich/";
-const foodDir = "assets/guide_food_images/";
-const touristDir = "assets/guide_tourist_images/";
-const patongDir = "assets/guide_patong_images/";
-const muayThaiDir = "assets/guide_muaythai_images/";
+const rich = "../guide_images_rich/";
+const foodDir = "../guide_food_images/";
+const touristDir = "../guide_tourist_images/";
+const patongDir = "../guide_patong_images/";
+const muayThaiDir = "../guide_muaythai_images/";
 const docxDir = "assets_docx/";
 
 const images = {
