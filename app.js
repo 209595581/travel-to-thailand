@@ -1,4 +1,4 @@
-﻿const rich = "assets/guide_images_rich/";
+const rich = "assets/guide_images_rich/";
 const foodDir = "assets/guide_food_images/";
 const touristDir = "assets/guide_tourist_images/";
 const patongDir = "assets/guide_patong_images/";
@@ -36,19 +36,22 @@ const images = {
 
 const foodImages = {
   padThai: foodDir + "01_pad_thai.jpg",
-  tomYum: foodDir + "02_tom_yum.jpg",
-  somTam: foodDir + "03_som_tam.jpg",
-  mangoSticky: foodDir + "04_mango_sticky.jpg",
-  greenCurry: foodDir + "05_green_curry.jpg",
-  thaiTea: foodDir + "06_thai_tea.jpg",
-  boatNoodles: foodDir + "07_boat_noodles.jpg",
+  tomYum: foodDir + "261dc1f0-ddfa-4e1b-9022-519699ab5524.jpg",
+  somTam: foodDir + "2cde0bc3-2348-4e20-8f96-36c430228972.jpg",
+  mangoSticky: foodDir + "99eec365-aef6-4161-9fc1-b688e55e2ad3.jpg",
+  greenCurry: foodDir + "bbaa89e8-bd9f-4d82-bc9d-28bcb8f26a47.jpg",
+  thaiTea: foodDir + "bc99698c-1a6b-4eb1-b87f-27a17c382efd.jpg",
+  boatNoodles: foodDir + "d92953c3-2b60-490e-987d-aeff1082c306.jpg",
   marketFood: foodDir + "08_market_food.jpg",
   phuketSeafood: foodDir + "09_phuket_seafood.jpg",
-  khaoSoi: foodDir + "10_khao_soi.jpg",
-  coconutIce: foodDir + "11_coconut_ice.jpg",
-  thaiSpread: foodDir + "12_thai_spread.jpg",
-  mangoTango: foodDir + "13_mango_tango.jpg",
-  somtamStall: foodDir + "14_somtam_stall.jpg",
+  khaoSoi: foodDir + "43529696-0bef-4076-90cd-1ec1120a6c90.jpg",
+  coconutIce: foodDir + "cbe377a6-7702-4b62-929b-ac4fbd2137c5.jpg",
+  thaiSpread: foodDir + "ed6e12a7-f9fd-4b4a-902e-d58193abefab.jpg",
+  mangoTango: foodDir + "99eec365-aef6-4161-9fc1-b688e55e2ad3.jpg",
+  somtamStall: foodDir + "5814bf6f-8be4-42b9-bfee-303f1d8cf02b.jpg",
+  grilledPrawns: foodDir + "9beda4fe-c436-4bac-b0fe-84e207db1a5d.jpg",
+  crabCurry: foodDir + "e676b118-2a5e-446e-83ee-e8cd3133645f.jpg",
+  seafoodTable: foodDir + "5814bf6f-8be4-42b9-bfee-303f1d8cf02b.jpg",
 };
 
 const touristImages = {
@@ -87,28 +90,53 @@ const muayThaiImages = {
 };
 
 const docxImages = {
-  auricoPool: docxDir + "image3.jpg",
-  auricoRoomWide: docxDir + "image4.jpg",
-  auricoBalcony: docxDir + "image7.jpg",
-  auricoAerial: docxDir + "image9.jpg",
-  jimThompson: docxDir + "image23.jpg",
-  mahanakhonSky: docxDir + "image24.jpg",
-  mahanakhonSunset: docxDir + "image25.jpg",
-  erawanShrine: docxDir + "image26.jpg",
-  ayutthayaCollage: docxDir + "image28.jpg",
-  shootingGuns: docxDir + "image29.jpg",
-  banzaanSeafood: docxDir + "image30.jpg",
-  promthepSunset: docxDir + "image31.jpg",
-  shootingPriceBoard: docxDir + "image32.jpg",
-  oldTownNight: docxDir + "image36.jpg",
+  auricoPool: docxDir + "image3.png",
+  auricoRoomWide: docxDir + "image4.png",
+  auricoTwinRoom: docxDir + "image5.jpg",
+  auricoLobby: docxDir + "image6.png",
+  auricoBalcony: docxDir + "image7.png",
+  auricoAerial: docxDir + "image8.jpg",
+  auricoPoolWide: docxDir + "image9.png",
+  atResidenceRoomUser: docxDir + "image10.jpg",
+  atResidenceExterior: docxDir + "image11.jpg",
+  atResidenceLounge: docxDir + "image12.jpg",
+  atResidenceStair: docxDir + "image13.jpg",
+  jimThompson: docxDir + "image23.png",
+  mahanakhonSky: docxDir + "image24.png",
+  mahanakhonSunset: docxDir + "image25.png",
+  erawanShrine: docxDir + "image26.png",
+  ayutthayaCollage: docxDir + "image28.png",
+  shootingGuns: docxDir + "image29.png",
+  banzaanSeafood: docxDir + "image30.png",
+  promthepSunset: docxDir + "image31.png",
+  shootingPriceBoard: docxDir + "image32.png",
+  oldTownNight: docxDir + "image36.png",
   bigBuddhaUser: docxDir + "image37.jpg",
   karonViewUser: docxDir + "image38.jpg",
-  promthepAfterglow: docxDir + "image40.jpg",
-  sunsetRed: docxDir + "image41.jpg",
+  promthepAfterglow: docxDir + "image40.png",
+  sunsetRed: docxDir + "image40.png",
   naiHarnUser: docxDir + "image42.jpg",
-  mangoDessertUser: docxDir + "image55.jpg",
-  somTamUser: docxDir + "image56.jpg",
+  mangoDessertUser: foodImages.coconutIce,
+  somTamUser: foodImages.somTam,
 };
+
+const autoImages = window.AUTO_IMAGES || {};
+
+function autoGallery(section, fallbackDetail = "自动导入图片") {
+  return (autoImages[section] || []).map((item) => [
+    item.title || "自动导入图片",
+    item.detail || fallbackDetail,
+    item.src,
+  ]);
+}
+
+function autoHotelImages(hotelName) {
+  const name = hotelName.toLowerCase();
+  const code = name.includes("aurico") ? "aurico" : name.includes("yanh") ? "yanh" : "residence";
+  return (autoImages.hotels || [])
+    .filter((item) => !item.hotel || item.hotel === "all" || item.hotel === code)
+    .map((item) => item.src);
+}
 
 const stages = [
   {
@@ -222,6 +250,15 @@ const hotels = [
     area: "曼谷 Dusit / Ratchawat",
     room: "高级双床房 2间",
     image: images.yanh,
+    gallery: [images.yanh, images.yanhRoom, touristImages.yaowaratDay, images.watBench],
+    map: {
+      from: "Suvarnabhumi Airport Bangkok",
+      fromLabel: "BKK机场",
+      to: "YANH Ratchawat Hotel Bangkok",
+      toLabel: "YANH Ratchawat",
+      distance: "约35公里",
+      time: "45-70分钟",
+    },
     note: "去老城、皇宫和湄南河线不绕，但不是BTS/MRT步行型酒店，市内多用Grab/Bolt。",
   },
   {
@@ -231,7 +268,25 @@ const hotels = [
     nights: "5晚",
     area: "普吉 Kata / Karon",
     room: "截图显示高级房 1间",
-    image: images.aurico,
+    image: docxImages.auricoPoolWide,
+    gallery: [
+      docxImages.auricoPool,
+      docxImages.auricoRoomWide,
+      docxImages.auricoTwinRoom,
+      docxImages.auricoLobby,
+      docxImages.auricoBalcony,
+      docxImages.auricoAerial,
+      docxImages.auricoPoolWide,
+      images.aurico,
+    ],
+    map: {
+      from: "Phuket International Airport",
+      fromLabel: "HKT机场",
+      to: "Aurico Kata Resort & Spa Phuket",
+      toLabel: "Aurico Kata",
+      distance: "约45公里",
+      time: "60-90分钟",
+    },
     note: "Kata作为基地很均衡。若4人同行，需要确认入住人数、床型、加床或第二间房。",
   },
   {
@@ -241,7 +296,23 @@ const hotels = [
     nights: "1晚",
     area: "曼谷 Lat Krabang / BKK机场旁",
     room: "豪华双人床房 2间",
-    image: images.atResidence,
+    image: docxImages.atResidenceRoomUser,
+    gallery: [
+      docxImages.atResidenceRoomUser,
+      docxImages.atResidenceExterior,
+      docxImages.atResidenceLounge,
+      docxImages.atResidenceStair,
+      images.atResidence,
+      images.atResidenceRoom,
+    ],
+    map: {
+      from: "Suvarnabhumi Airport Bangkok",
+      fromLabel: "BKK机场",
+      to: "At Residence Suvarnabhumi Hotel",
+      toLabel: "At Residence",
+      distance: "约5-6公里",
+      time: "10-15分钟",
+    },
     note: "PG280深夜到、次日国际航班早，住机场旁最省心。提前确认late check-in和接驳。",
   },
 ];
@@ -256,7 +327,7 @@ const days = [
     hotel: "YANH Ratchawat Hotel",
     transport: "BKK机场 -> YANH，约45-70分钟",
     flight: "上海17:30到；成都18:10到",
-    hero: touristImages.bangkokStreetFood,
+    hero: foodImages.tomYum,
     tags: ["抵达", "汇合", "轻松晚餐"],
     schedule: [
       ["17:30", "上海抵达BKK", "先取行李、办电话卡或取现金，等成都航班。"],
@@ -266,7 +337,7 @@ const days = [
     ],
     places: ["YANH酒店周边"],
     foods: ["Pad Thai", "泰式炒饭/炒粉", "泰奶"],
-    images: [images.yanh, touristImages.bangkokStreetFood, foodImages.padThai],
+    images: [images.yanh, foodImages.tomYum, foodImages.padThai],
     note: "给酒店留言 late check-in；把酒店英文名、地址和订单截图存离线。",
   },
   {
@@ -653,7 +724,7 @@ const placeGallery = [
   ["Kata Beach", "8月14日后基地", images.kata],
   ["神仙半岛射击场", "8月14日下午", docxImages.shootingGuns],
   ["班赞海鲜", "8月14日晚餐", docxImages.banzaanSeafood],
-  ["神仙半岛", "8月14日射击/日落", images.promthep],
+  ["神仙半岛", "8月14日射击/日落", docxImages.promthepSunset],
   ["攀牙湾", "8月15日出海首选", images.phangNga],
   ["普吉老镇夜景", "8月16日周末夜市", docxImages.oldTownNight],
   ["查龙寺", "8月16日", images.watChalong],
@@ -665,23 +736,26 @@ const placeGallery = [
   ["Bangla Boxing Stadium", "泰拳备用，适合想连芭东夜生活", muayThaiImages.banglaStadium],
   ["Nai Harn", "海滩备选", images.naiHarn],
   ["珊瑚岛", "8月18日好天气备选", images.coral],
+  ...autoGallery("places", "自动导入景点照片"),
 ];
 
 const foodGallery = [
-  ["Pad Thai", "第一晚或商场餐厅都稳", foodImages.padThai],
-  ["冬阴功", "正餐和海鲜餐都适合", foodImages.tomYum],
-  ["青木瓜沙拉", "清爽但记得控辣", foodImages.somTam],
-  ["芒果糯米饭", "商场、夜市、甜品店", foodImages.mangoSticky],
-  ["绿咖喱", "适合多人点一份共享", foodImages.greenCurry],
-  ["泰式奶茶", "少糖更舒服", foodImages.thaiTea],
-  ["船面", "曼谷午餐/小吃", foodImages.boatNoodles],
-  ["市场熟食", "夜市随买随吃", foodImages.marketFood],
-  ["普吉海鲜", "Rawai/海边餐厅", foodImages.phuketSeafood],
-  ["Khao Soi", "Kata慢玩日晚餐可试", foodImages.khaoSoi],
-  ["椰子冰淇淋", "热天收尾", foodImages.coconutIce],
-  ["泰式拼桌", "多人点菜模板", foodImages.thaiSpread],
-  ["芒果甜品", "Siam/商场下午茶", foodImages.mangoTango],
-  ["街边Som Tam", "想本地口味就少辣试", foodImages.somtamStall],
+  ["Pad Thai / 冬阴功锅", "第一晚或商场餐厅都稳，新图更有实拍感。", foodImages.padThai],
+  ["泰式汤咖喱小桌", "适合多人共享，点菜时少辣更稳。", foodImages.tomYum],
+  ["青木瓜沙拉拼盘", "清爽但记得控辣，可以配烤肉和米饭。", foodImages.somTam],
+  ["夜市甜品和糯米饭", "商场、夜市、甜品店都容易买到。", foodImages.mangoSticky],
+  ["咖喱主菜", "适合多人点一份共享，配米饭刚好。", foodImages.greenCurry],
+  ["泰奶和甜品", "少糖更舒服，适合下午茶或夜市收尾。", foodImages.thaiTea],
+  ["本地盖饭/船面感", "曼谷午餐、小店或夜市都可以找类似选择。", foodImages.boatNoodles],
+  ["市场熟食", "夜市随买随吃，适合8月16日周末夜市。", foodImages.marketFood],
+  ["普吉海鲜摊", "Rawai、Patong、班赞方向都适合。", foodImages.phuketSeafood],
+  ["泰式拼桌", "Kata慢玩日或芭东晚餐可试。", foodImages.khaoSoi],
+  ["甜品拼盘", "热天收尾，适合商场或老镇。", foodImages.coconutIce],
+  ["大桌泰餐", "多人点菜模板，海鲜、咖喱、炒菜一起上。", foodImages.thaiSpread],
+  ["烤虾海鲜", "普吉海鲜重点图，适合班赞/Rawai。", foodImages.grilledPrawns],
+  ["咖喱蟹", "想吃一顿更丰盛时放在芭东或Rawai。", foodImages.crabCurry],
+  ["班赞海鲜实拍", "8月14或8月17晚餐可参考。", foodImages.seafoodTable],
+  ...autoGallery("food", "自动导入美食照片"),
 ];
 
 const streetGallery = [
@@ -704,13 +778,21 @@ const streetGallery = [
   ["泰拳赛前角落", "8月18日Rawai泰拳夜，氛围会比普通景点更有现场感。", muayThaiImages.corner],
   ["泰拳训练合影感", "游客看比赛前后常见的拳手和教练视角。", muayThaiImages.trainer],
   ["拳场比赛瞬间", "适合放进泰拳页面和8月18日主线。", muayThaiImages.match],
+  ...autoGallery("street", "自动导入现场照片"),
 ];
 
 const docPhotoGallery = [
   ["Aurico酒店泳池", "你在Word里新增的酒店照片，放进网页酒店/住宿氛围。", docxImages.auricoPool],
   ["Aurico房间", "比官网小图更直观，适合同行看房型感。", docxImages.auricoRoomWide],
+  ["Aurico双床房", "房间细节更清楚，适合确认入住观感。", docxImages.auricoTwinRoom],
+  ["Aurico大堂/公共区", "比单张泳池照更能看出度假村质感。", docxImages.auricoLobby],
   ["Aurico阳台", "普吉Kata段住宿视角。", docxImages.auricoBalcony],
   ["Aurico俯视", "酒店公共区和泳池空间感。", docxImages.auricoAerial],
+  ["Aurico泳池全景", "这张适合放酒店页主图，视觉更亮。", docxImages.auricoPoolWide],
+  ["At Residence房间", "8月19日深夜到曼谷后的机场酒店房间。", docxImages.atResidenceRoomUser],
+  ["At Residence外观", "离BKK机场近，适合最后一晚过渡。", docxImages.atResidenceExterior],
+  ["At Residence休息区", "公共区照片，方便同行判断环境。", docxImages.atResidenceLounge],
+  ["At Residence楼梯/走廊", "机场酒店内部氛围补充。", docxImages.atResidenceStair],
   ["Jim Thompson House", "8月12日上午城市休闲线。", docxImages.jimThompson],
   ["四面佛", "8月12日Siam/CentralWorld附近可顺路。", docxImages.erawanShrine],
   ["Mahanakhon城市视野", "傍晚看城市线的照片。", docxImages.mahanakhonSky],
@@ -726,6 +808,7 @@ const docPhotoGallery = [
   ["Nai Harn海滩", "浪大时看海，不强行下水。", docxImages.naiHarnUser],
   ["芒果甜品", "商场或老镇甜品备选。", docxImages.mangoDessertUser],
   ["青木瓜沙拉", "点少辣更稳。", docxImages.somTamUser],
+  ...autoGallery("docphotos", "自动导入补充照片"),
 ];
 
 const nightPlan = {
@@ -751,6 +834,7 @@ const nightGallery = [
   ["Simon Cabaret舞台", "普吉经典人妖秀，官网称每日三场。", patongImages.simonStage],
   ["Simon Cabaret演出", "适合订19:30或21:00场。", patongImages.simonShow],
   ["Simon Cabaret服装", "演出后合影通常需小费。", patongImages.simonCostume],
+  ...autoGallery("nightlife", "自动导入夜游照片"),
 ];
 
 const fightPlan = {
@@ -784,6 +868,7 @@ const fightGallery = [
   ["Nai Harn傍晚", "泰拳前可以轻松吃饭、看海，不要再塞重行程。", docxImages.naiHarnUser],
   ["Kata游客海滩", "白天慢玩，晚上再出门。", touristImages.kataTourist],
   ["Rawai海鲜方向", "晚餐可以放在Rawai/Nai Harn一带。", foodImages.phuketSeafood],
+  ...autoGallery("fight", "自动导入泰拳照片"),
 ];
 
 const foodSchedule = [
@@ -812,6 +897,86 @@ const phrases = [
 ];
 
 let selectedDay = 0;
+
+const mapPlaceAliases = {
+  "BKK素万那普机场": "Suvarnabhumi Airport Bangkok",
+  "BKK机场": "Suvarnabhumi Airport Bangkok",
+  "HKT普吉机场": "Phuket International Airport",
+  "YANH Ratchawat Hotel": "YANH Ratchawat Hotel Bangkok",
+  "Aurico Kata Resort & Spa": "Aurico Kata Resort & Spa Phuket",
+  "At Residence Suvarnabhumi": "At Residence Suvarnabhumi Hotel",
+  "大皇宫 / 卧佛寺": "The Grand Palace Bangkok",
+  "Siam / Jim Thompson / Mahanakhon": "Jim Thompson House Bangkok",
+  "神仙半岛射击 / Promthep": "Promthep Cape Phuket",
+  "Patong / 班赞 / Bangla Road": "Banzaan Fresh Market Patong Phuket",
+  "Simon Cabaret Phuket": "Simon Cabaret Phuket",
+  "Rawai Boxing Stadium": "Rawai Boxing Stadium Phuket",
+  "Bangla Boxing Stadium": "Bangla Boxing Stadium Phuket",
+  "普吉老镇 / 周末夜市": "Phuket Old Town Sunday Walking Street",
+  "查龙寺 / 普吉大佛": "Wat Chalong Phuket",
+  "HKT普吉机场": "Phuket International Airport",
+};
+
+const placeMapTargets = {
+  大皇宫: "The Grand Palace Bangkok",
+  卧佛寺: "Wat Pho Bangkok",
+  郑王庙: "Wat Arun Bangkok",
+  唐人街: "Yaowarat Road Bangkok",
+  ICONSIAM: "ICONSIAM Bangkok",
+  "Jim Thompson House": "Jim Thompson House Bangkok",
+  四面佛: "Erawan Shrine Bangkok",
+  Mahanakhon: "King Power Mahanakhon Bangkok",
+  云石寺: "Wat Benchamabophit Bangkok",
+  大城府: "Ayutthaya Historical Park",
+  "Kata Beach": "Kata Beach Phuket",
+  神仙半岛射击场: "Phuket Shooting Range Rawai",
+  班赞海鲜: "Banzaan Fresh Market Patong Phuket",
+  神仙半岛: "Promthep Cape Phuket",
+  攀牙湾: "Phang Nga Bay",
+  普吉老镇夜景: "Phuket Old Town",
+  查龙寺: "Wat Chalong Phuket",
+  普吉大佛: "Big Buddha Phuket",
+  "Patong Beach": "Patong Beach Phuket",
+  "Bangla Road": "Bangla Road Patong Phuket",
+  "Simon Cabaret": "Simon Cabaret Phuket",
+  "Rawai Boxing Stadium": "Rawai Boxing Stadium Phuket",
+  "Bangla Boxing Stadium": "Bangla Boxing Stadium Phuket",
+  "Nai Harn": "Nai Harn Beach Phuket",
+  珊瑚岛: "Coral Island Phuket",
+};
+
+function mapPlace(place) {
+  return mapPlaceAliases[place] || place;
+}
+
+function mapsSearchUrl(query) {
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
+}
+
+function mapsDirectionsUrl(origin, destination) {
+  return `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(mapPlace(origin))}&destination=${encodeURIComponent(mapPlace(destination))}&travelmode=driving`;
+}
+
+function defaultOriginForPlace(title) {
+  const bangkok = ["大皇宫", "卧佛寺", "郑王庙", "唐人街", "ICONSIAM", "Jim Thompson House", "四面佛", "Mahanakhon", "云石寺", "大城府"];
+  return bangkok.includes(title) ? "YANH Ratchawat Hotel Bangkok" : "Aurico Kata Resort & Spa Phuket";
+}
+
+function renderMapPreview({ fromLabel, toLabel, from, to, distance, time, url, compact = false }) {
+  const mapUrl = url || mapsDirectionsUrl(from || fromLabel, to || toLabel);
+  return `
+    <a class="map-preview ${compact ? "compact" : ""}" href="${mapUrl}" target="_blank" rel="noopener">
+      <div class="map-road major"></div>
+      <div class="map-road minor"></div>
+      <div class="map-pin start"></div>
+      <div class="map-route-line"></div>
+      <div class="map-pin end"></div>
+      <div class="map-label start">${fromLabel}</div>
+      <div class="map-label end">${toLabel}</div>
+      <div class="map-chip">${distance || "打开路线"} · ${time || "Google Maps"}</div>
+    </a>
+  `;
+}
 
 function $(selector) {
   return document.querySelector(selector);
@@ -977,6 +1142,13 @@ function renderHotels() {
           <p><strong>${hotel.area}</strong></p>
           <p>${hotel.room}</p>
           <p>${hotel.note}</p>
+          ${hotel.map ? renderMapPreview(hotel.map) : ""}
+          <a class="map-link" href="${mapsSearchUrl(`${hotel.name} Thailand`)}" target="_blank" rel="noopener">查看酒店位置</a>
+          <div class="hotel-photo-strip">
+            ${[...(hotel.gallery || [hotel.image]), ...autoHotelImages(hotel.name)]
+              .map((src) => `<img class="clickable-photo" src="${src}" alt="${hotel.name}照片" data-caption="${hotel.name}" />`)
+              .join("")}
+          </div>
         </div>
       </article>`,
     )
@@ -1004,6 +1176,14 @@ function renderTransport() {
         <article class="route-card">
           <p class="eyebrow">${route.day} · ${route.mode}</p>
           <h3>${route.base} → ${route.target}</h3>
+          ${renderMapPreview({
+            fromLabel: route.base,
+            toLabel: route.target,
+            from: route.base,
+            to: route.target,
+            distance: route.distance,
+            time: route.time,
+          })}
           <div class="route-stats">
             <span>${route.distance}</span>
             <span>${route.time}</span>
@@ -1015,7 +1195,22 @@ function renderTransport() {
   }
 }
 
-function renderGallery(target, data) {
+function renderAutoRouteGallery() {
+  const section = $("#autoRouteSection");
+  const grid = $("#autoRouteGallery");
+  if (!section || !grid) return;
+
+  const data = autoGallery("routes", "自动导入路线截图");
+  section.hidden = data.length === 0;
+  if (!data.length) {
+    grid.innerHTML = "";
+    return;
+  }
+
+  renderGallery("#autoRouteGallery", data);
+}
+
+function renderGallery(target, data, options = {}) {
   const grid = $(target);
   grid.innerHTML = data
     .map(
@@ -1025,6 +1220,19 @@ function renderGallery(target, data) {
         <div class="gallery-body">
           <h3>${title}</h3>
           <p>${detail}</p>
+          ${
+            options.maps
+              ? renderMapPreview({
+                  fromLabel: defaultOriginForPlace(title).includes("YANH") ? "YANH酒店" : "Aurico酒店",
+                  toLabel: title,
+                  from: defaultOriginForPlace(title),
+                  to: placeMapTargets[title] || title,
+                  distance: "路线",
+                  time: "点开导航",
+                  compact: true,
+                })
+              : ""
+          }
         </div>
       </article>`,
     )
@@ -1198,7 +1406,8 @@ function init() {
   renderFlights();
   renderHotels();
   renderTransport();
-  renderGallery("#placeGallery", placeGallery);
+  renderAutoRouteGallery();
+  renderGallery("#placeGallery", placeGallery, { maps: true });
   renderGallery("#foodGallery", foodGallery);
   renderStreetGallery();
   renderDocPhotoGallery();

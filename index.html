@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>曼谷 + 普吉岛旅行行程板</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="auto-images.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -119,6 +120,15 @@
               <span class="status-pill">按公路估算，出发前看实时路况</span>
             </div>
             <div class="route-grid" id="routeGrid"></div>
+          </section>
+          <section class="route-dashboard auto-section" id="autoRouteSection" hidden>
+            <div class="section-title-row">
+              <div>
+                <p class="eyebrow">Auto Maps</p>
+                <h2>自动导入的路线截图</h2>
+              </div>
+            </div>
+            <div class="gallery-grid" id="autoRouteGallery"></div>
           </section>
         </section>
 
